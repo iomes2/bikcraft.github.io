@@ -1,0 +1,149 @@
+body {
+  padding-bottom: 600px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1, ul, p {
+  margin: 0px;
+}
+ul {
+
+  list-style: none;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+:root {
+  --text1: #ffffff;
+  --text2: #B2B2B2;
+  --text3: #000000;
+  --bg1: #000000;
+  --mw-a-bg1: #111111;
+}
+.header-bg {
+  background-color: var(--bg1);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.header-menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.header-menu a {
+  font-size: 1.05rem;
+  color: var(--text1);
+  display: inline-block;
+  padding: 16px 0px;
+  position: relative;
+}
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: var(--text1);
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+.header-menu a:hover:after {
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .header-menu a {
+    background-color: var(--mw-a-bg1);
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  .header-menu {
+    gap: 20px;
+  }
+  .header-menu a:hover {
+    background: #2E2E2E;
+  }
+  .header-menu a:after {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+.introducao-bg {
+  background-color: var(--bg1);
+  color: var(--text1);
+  box-shadow: inset 0 -120px white;
+}
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.introducao-conteudo {
+  align-self: end;
+  padding-bottom: 200px;
+}
+
+.introducao img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.introducao h1 {
+  margin-bottom: 32px;
+  font-size: 64px;
+  line-height: 1.125;
+}
+.introducao h1 span {
+  color: #ffbb00;
+}
+.introducao p {
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--text2);
+}
+.introducao a {
+  display: inline-block;
+  padding: 16px 32px;
+  background: linear-gradient( #FFBF00, #F2A50C);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: #332200;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: bold;
+}
+.introducao a:hover {
+  background: linear-gradient( #ffb60d, #e59317);
+}
